@@ -1,0 +1,442 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <link rel="shortcut icon" href="umass.jpg">
+    <meta content="text/html; charset=windows-1252"
+      http-equiv="Content-Type">
+    <title>System Software Design</title>
+    <meta content="David Irwin" name="author">
+    <meta content="Course Webpage" name="description">
+  </head>
+  <body alink="#EE0000" bgcolor="#FFFFFF" link="#0000EE" text="#000000"
+    vlink="#551A8B">
+    <table bgcolor="#ffffff" border="0" cellpadding="2" cellspacing="2"
+      width="100%">
+      <tbody>
+        <tr>
+          <td bgcolor="#ffffff" valign="top"><big><big><b>ECE 570/670 -
+                  (Advanced) System Software Design</b></big></big><big><big><b><br>
+                  <a href="http://www.umass.edu"><font color="#990000"><small>University
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        of Massachusetts Amherst</small></font></a><br>
+                  <a href="http://engineering.umass.edu"><font
+                      color="#990000"><small>The College of Engineering</small></font>
+                  </a><br>
+                  <a href="http://www.ece.umass.edu"><font
+                      color="#990000"><small>Department of Electrical
+                        and Computer Engineering</small></font></a></b></big></big></td>
+          <td align="left" valign="top"><a href="http://www.umass.edu"><img
+                alt="UMass Amherst Logo" src="umass-logo.jpg"
+                height="100" border="0" width="129"></a><br>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <br>
+    <table height="33" align="center" bgcolor="#ffffff" border="2"
+      cellpadding="2" cellspacing="2" width="801">
+      <tbody>
+        <tr>
+          <td align="center" bgcolor="#ffffff" valign="top"><a
+              href="index.html"><b>Home</b></a><br>
+          </td>
+          <td align="center" valign="top"><a href="calendar.html"><b>Calendar</b></a>
+          </td>
+          <td align="center" valign="top"><a href="staff.html"><b>Staff</b></a>
+          </td>
+          <td align="center" valign="top"><a href="assignments.html"><b>Assignments</b></a></td>
+          <td align="center" valign="top"><a href="projects.html"><b>Projects</b></a><a
+href="file:///Users/irwin/Teaching/ece373/fall12/web/projects.html"><br>
+            </a> </td>
+          <td align="center" valign="top"><a href="resources.html"><b>Resources</b></a></td>
+          <td align="center" valign="top"><a
+              href="http://smart.ecs.umass.edu/feedback/feedback.html"><b>Feedback</b></a></td>
+        </tr>
+      </tbody>
+    </table>
+    <big><big><b><br>
+        </b></big></big><big><big><small><b>Resources<br>
+            <br>
+          </b><small>You will be working on your projects within a
+            virtual machine environment. I will supply a virtual
+            appliance that you can run within the VirtualBox VM
+            platform.&nbsp; <b>To install VirtualBox visit </b><b><a
+                href="https://www.virtualbox.org/wiki/Downloads">here</a></b><b>.&nbsp;
+
+
+
+
+
+
+
+
+
+
+
+
+              You can download the course's virtual appliance </b><b><a
+href="http://smart.ecs.umass.edu/feedback/ece570-updated.ova">here</a></b><b>.</b>&nbsp;
+
+            <b>This virtual appliance</b></small></small></big></big><big><big><small><small><b>
+              includes Guest Additions, and sudo access to apt-get,
+              apt-cache, mount, and umount. These additions enable you
+              to share folders between your VM and local machine, and to
+              install software from Ubuntu repositories.&nbsp; See
+              sections below on how to do this.</b><br>
+            <br>
+            To start the virtual appliance VM, open the VirtualBox
+            application, and then go to File -&gt; Import
+            Appliance.&nbsp; Then select the file ece570.ova that you
+            just downloaded. Each group will have their own username, of
+            the form group&lt;#&gt;, on the virtual appliance with their
+            own password.&nbsp; I will email the username and password
+            for your group.<br>
+            <br>
+            This class assumes you are comfortable programming in C++/C
+            in a UNIX environment, e.g., using a bash shell, make, gdb
+            debugger, etc. You are free to use any integrated
+            development environment (IDE) you would like for
+            programming, e.g., such as <a
+              href="https://www.eclipse.org/">Eclipse</a>, or you may
+            simply use a text editor, e.g., such as emacs, nano, or
+            vim.&nbsp; You do not have to use the virtual appliance for
+            development.&nbsp; However, the virtual appliance is setup <i>exactly
+
+
+
+
+
+            </i>like the machine we will use for grading, so <b>you
+              should always verify that your code works on the virtual
+              appliance even if you do development somewhere else.</b> <b>You
+
+
+
+
+
+              must also submit your code through the virtual appliance;
+              copying the submit program and submitting from another
+              machine </b><b><i>will not work!</i></b><br>
+            <br>
+            The canonical book for C++ is <a
+href="http://www.amazon.com/The-Programming-Language-4th-Edition/dp/0321563840">"The
+
+
+
+
+
+
+
+
+
+
+              C++ Programming Language"</a> by Bjarne Stroustroup.&nbsp;
+            The canonical book for C is <a
+href="http://www.amazon.com/C-Programming-Language-2nd-Edition/dp/0131103628">"The
+
+
+
+
+
+
+
+
+
+
+              C Programming Language"</a> by Kernighan and
+            Ritchie.&nbsp; Below are links to some shorter tutorials on
+            C/C++ programming.<br>
+            <br>
+            <a href="resources/EssentialC.pdf">Essential C Tutorial</a><br>
+            <a href="resources/intro_to_c++.pdf"> Introduction to C++
+              guide</a><br>
+            <a href="resources/c.pdf"> </a></small><a
+            href="resources/c.pdf"> </a></small></big></big><big><big><small><small><a
+              href="resources/c.pdf">Programming in C</a></small></small></big></big><br>
+    <a href="https://www.sgi.com/tech/stl/table_of_contents.html">C++
+      Standard Template Library</a><br>
+    <br>
+    <b><big>Copying files to and from your VM</big><br>
+      <br>
+    </b>You can use ssh and scp to copy files to and from your local
+    machine.&nbsp; The VirtualBox VM should be setup with port
+    forwarding to enable this, as described below.&nbsp; However, just
+    in case you cannot use the examples below to ssh/scp into the VM,
+    try the following: open VirtualBox and select your VM.&nbsp; Then
+    click Machine -&gt; Settings in the menu at the top.&nbsp; Then
+    click the Network tab across the top.&nbsp; In the Network tab,
+    click on Port Forwarding.&nbsp; If there is not already a rule for
+    SSH, click the small + sign in the upper right corner of the
+    box.&nbsp; Now type rule name as "SSH", the protocol should be
+    "TCP", the Host IP should be empty, the Host Port can be "2500", the
+    Guest IP should be empty, and the Guest Port should be "22".<br>
+    <br>
+    With port forwarding setup, if you're using Mac OSX, you can use ssh
+    and scp in the terminal program (in
+    Applications-&gt;Utilities-&gt;Terminal).&nbsp; To ssh into your VM
+    type:<br>
+    <br>
+    $ ssh -p 2500 group&lt;#&gt;@localhost<br>
+    <br>
+    To scp a file to the Desktop directory within your home directory
+    type:<br>
+    <br>
+    $ scp -P 2500 file_name.txt group&lt;#&gt;@localhost:Desktop/.<br>
+    <br>
+    To scp a file from your VM to your desktop type:<br>
+    <br>
+    $ scp -P 2500 group&lt;#&gt;@localhost:Desktop/file_name.txt
+    file_name.txt<br>
+    <br>
+    If you are using Windows, then you will need an SSH or SCP program,
+    such as Putty or WinSCP (linked below).&nbsp; Note that for these
+    programs you will need to connect to localhost, and you will need to
+    change the default port from 22 to 2500 (i.e., if you see a 22
+    somewhere change it to be 2500, and enter 127.0.0.1 for the IP
+    address to connect to). <br>
+    <br>
+    <meta charset="utf-8">
+    <a href="http://the.earth.li/%7Esgtatham/putty/latest/x86/putty.exe"
+      style="font-family: Times; font-size: 16px; font-style: normal;
+      font-variant: normal; font-weight: normal; letter-spacing: normal;
+      line-height: normal; orphans: auto; text-align: start;
+      text-indent: 0px; text-transform: none; white-space: normal;
+      widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px;
+      background-color: rgb(255, 255, 255);">Putty</a><span
+      style="color: rgb(0, 0, 0); font-family: Times; font-size: 16px;
+      font-style: normal; font-variant: normal; font-weight: normal;
+      letter-spacing: normal; line-height: normal; orphans: auto;
+      text-align: start; text-indent: 0px; text-transform: none;
+      white-space: normal; widows: auto; word-spacing: 0px;
+      -webkit-text-stroke-width: 0px; display: inline !important; float:
+      none; background-color: rgb(255, 255, 255);"><span
+        class="Apple-converted-space">&nbsp;</span>- Windows SSH client</span><br
+      style="color: rgb(0, 0, 0); font-family: Times; font-size: 16px;
+      font-style: normal; font-variant: normal; font-weight: normal;
+      letter-spacing: normal; line-height: normal; orphans: auto;
+      text-align: start; text-indent: 0px; text-transform: none;
+      white-space: normal; widows: auto; word-spacing: 0px;
+      -webkit-text-stroke-width: 0px; background-color: rgb(255, 255,
+      255);">
+    <a href="http://winscp.net/download/winscp434.zip"
+      style="font-family: Times; font-size: 16px; font-style: normal;
+      font-variant: normal; font-weight: normal; letter-spacing: normal;
+      line-height: normal; orphans: auto; text-align: start;
+      text-indent: 0px; text-transform: none; white-space: normal;
+      widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px;
+      background-color: rgb(255, 255, 255);">WinSCP</a><span
+      style="color: rgb(0, 0, 0); font-family: Times; font-size: 16px;
+      font-style: normal; font-variant: normal; font-weight: normal;
+      letter-spacing: normal; line-height: normal; orphans: auto;
+      text-align: start; text-indent: 0px; text-transform: none;
+      white-space: normal; widows: auto; word-spacing: 0px;
+      -webkit-text-stroke-width: 0px; display: inline !important; float:
+      none; background-color: rgb(255, 255, 255);"><span
+        class="Apple-converted-space">&nbsp;</span>- Windows SCP client</span><br>
+    <br>
+    ssh and scp require you to use a password.&nbsp; You can change the
+    password on the VM (so that it is simpler to type) by running the
+    passwd program in the terminal on the VM.&nbsp; <br>
+    <br>
+    <meta charset="utf-8">
+    <big><b>Sharing folders between your local machine and the VM</b></big><b
+      style="color: rgb(0, 0, 0); font-family: Times; font-size: medium;
+      font-style: normal; font-variant: normal; letter-spacing: normal;
+      line-height: normal; orphans: auto; text-align: start;
+      text-indent: 0px; text-transform: none; white-space: normal;
+      widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px;"><big><big><small><br>
+            <br>
+          </small></big></big></b><span style="color: rgb(0, 0, 0);
+      font-family: Times; font-size: medium; font-style: normal;
+      font-variant: normal; font-weight: normal; letter-spacing: normal;
+      line-height: normal; orphans: auto; text-align: start;
+      text-indent: 0px; text-transform: none; white-space: normal;
+      widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px;
+      display: inline !important; float: none; background-color:
+      rgb(255, 255, 255);">If you have downloaded the latest VM image,
+      which has VirtualBox Guest Additions installed, you can also share
+      folders between your VM and your Desktop. To share folders between
+      your VirtualBox VM and your Desktop, click on "Devices" in the
+      VirtualBox menu, and then click on "Shared Folders Settings...".<span
+        class="Apple-converted-space"> </span></span><span
+      style="color: rgb(0, 0, 0); font-family: Times; font-size: medium;
+      font-style: normal; font-variant: normal; font-weight: normal;
+      letter-spacing: normal; line-height: normal; orphans: auto;
+      text-align: start; text-indent: 0px; text-transform: none;
+      white-space: normal; widows: 1; word-spacing: 0px;
+      -webkit-text-stroke-width: 0px; display: inline !important; float:
+      none; background-color: rgb(255, 255, 255);">To add a new folder,
+      click on the little folder icon with a plus sign in the upper
+      right corner.&nbsp; Choose the folder you wish to share on your
+      local machine in the top box; in the bottom box choose the name,
+      such as "mymachine".</span><br style="color: rgb(0, 0, 0);
+      font-family: Times; font-size: medium; font-style: normal;
+      font-variant: normal; font-weight: normal; letter-spacing: normal;
+      line-height: normal; orphans: auto; text-align: start;
+      text-indent: 0px; text-transform: none; white-space: normal;
+      widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px;">
+    <br style="color: rgb(0, 0, 0); font-family: Times; font-size:
+      medium; font-style: normal; font-variant: normal; font-weight:
+      normal; letter-spacing: normal; line-height: normal; orphans:
+      auto; text-align: start; text-indent: 0px; text-transform: none;
+      white-space: normal; widows: 1; word-spacing: 0px;
+      -webkit-text-stroke-width: 0px;">
+    <span style="color: rgb(0, 0, 0); font-family: Times; font-size:
+      medium; font-style: normal; font-variant: normal; font-weight:
+      normal; letter-spacing: normal; line-height: normal; orphans:
+      auto; text-align: start; text-indent: 0px; text-transform: none;
+      white-space: normal; widows: 1; word-spacing: 0px;
+      -webkit-text-stroke-width: 0px; display: inline !important; float:
+      none; background-color: rgb(255, 255, 255);">Click on "Make
+      Permanent" and "Auto-mount" if you want to share this folder
+      everytime the VM boots.</span><br style="color: rgb(0, 0, 0);
+      font-family: Times; font-size: medium; font-style: normal;
+      font-variant: normal; font-weight: normal; letter-spacing: normal;
+      line-height: normal; orphans: auto; text-align: start;
+      text-indent: 0px; text-transform: none; white-space: normal;
+      widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px;">
+    <span style="color: rgb(0, 0, 0); font-family: Times; font-size:
+      medium; font-style: normal; font-variant: normal; font-weight:
+      normal; letter-spacing: normal; line-height: normal; orphans:
+      auto; text-align: start; text-indent: 0px; text-transform: none;
+      white-space: normal; widows: 1; word-spacing: 0px;
+      -webkit-text-stroke-width: 0px; display: inline !important; float:
+      none; background-color: rgb(255, 255, 255);">Now inside of your
+      VM, run the following command, to get your uid and gid numbers
+      (where XX is your group number).<br>
+      <br>
+      $ id <br>
+      uid=501(groupXX) gid=20(groupXX)
+groups=20(staff),12(everyone),61(localaccounts),79(_appserverusr),80(admin),81(_appserveradm),98(_lpadmin),33(_appstore),100(_lpoperator),204(_developer),395(com.apple.access_ftp),399(com.apple.access_ssh),401(com.apple.access_screensharing-disabled)<br>
+      <br>
+      Now run the following command, where "mymachine" comes from the
+      name you chose above and XXXX and YYYY are the uid and gid
+      numbers, respectively, from running the id command above.</span><br
+      style="color: rgb(0, 0, 0); font-family: Times; font-size: medium;
+      font-style: normal; font-variant: normal; font-weight: normal;
+      letter-spacing: normal; line-height: normal; orphans: auto;
+      text-align: start; text-indent: 0px; text-transform: none;
+      white-space: normal; widows: 1; word-spacing: 0px;
+      -webkit-text-stroke-width: 0px;">
+    <br style="color: rgb(0, 0, 0); font-family: Times; font-size:
+      medium; font-style: normal; font-variant: normal; font-weight:
+      normal; letter-spacing: normal; line-height: normal; orphans:
+      auto; text-align: start; text-indent: 0px; text-transform: none;
+      white-space: normal; widows: 1; word-spacing: 0px;
+      -webkit-text-stroke-width: 0px;">
+    <span style="color: rgb(0, 0, 0); font-family: Times; font-size:
+      medium; font-style: normal; font-variant: normal; font-weight:
+      normal; letter-spacing: normal; line-height: normal; orphans:
+      auto; text-align: start; text-indent: 0px; text-transform: none;
+      white-space: normal; widows: 1; word-spacing: 0px;
+      -webkit-text-stroke-width: 0px; display: inline !important; float:
+      none; background-color: rgb(255, 255, 255);">$ sudo mount -t
+      vboxsf -o umask=002,gid=XXXX,uid=YYYY mymachine /mnt</span><br
+      style="color: rgb(0, 0, 0); font-family: Times; font-size: medium;
+      font-style: normal; font-variant: normal; font-weight: normal;
+      letter-spacing: normal; line-height: normal; orphans: auto;
+      text-align: start; text-indent: 0px; text-transform: none;
+      white-space: normal; widows: 1; word-spacing: 0px;
+      -webkit-text-stroke-width: 0px;">
+    <br style="color: rgb(0, 0, 0); font-family: Times; font-size:
+      medium; font-style: normal; font-variant: normal; font-weight:
+      normal; letter-spacing: normal; line-height: normal; orphans:
+      auto; text-align: start; text-indent: 0px; text-transform: none;
+      white-space: normal; widows: 1; word-spacing: 0px;
+      -webkit-text-stroke-width: 0px;">
+    <span style="color: rgb(0, 0, 0); font-family: Times; font-size:
+      medium; font-style: normal; font-variant: normal; font-weight:
+      normal; letter-spacing: normal; line-height: normal; orphans:
+      auto; text-align: start; text-indent: 0px; text-transform: none;
+      white-space: normal; widows: 1; word-spacing: 0px;
+      -webkit-text-stroke-width: 0px; display: inline !important; float:
+      none; background-color: rgb(255, 255, 255);">Now all of your files
+      in the local directory you chose should be available in the /mnt
+      directory on the VM.&nbsp; Note that you must access them as the
+      root user (e.g., via sudo).</span><br>
+    <br>
+    <big><b>Installing Software</b></big><b style="color: rgb(0, 0, 0);
+      font-family: Times; font-size: medium; font-style: normal;
+      font-variant: normal; letter-spacing: normal; line-height: normal;
+      orphans: auto; text-align: start; text-indent: 0px;
+      text-transform: none; white-space: normal; widows: 1;
+      word-spacing: 0px; -webkit-text-stroke-width: 0px;"><big><big><small><br>
+            <br>
+          </small></big></big></b><span style="color: rgb(0, 0, 0);
+      font-family: Times; font-size: medium; font-style: normal;
+      font-variant: normal; letter-spacing: normal; line-height: normal;
+      orphans: auto; text-align: start; text-indent: 0px;
+      text-transform: none; white-space: normal; widows: 1;
+      word-spacing: 0px; -webkit-text-stroke-width: 0px;"><big><big><small><small>You
+
+
+
+
+              have sudo (i.e., root) access to run the following
+              commands on the VM: apt-cache, apt-get, mount, and umount.
+              apt-cache enables you to search for code repositories on
+              your VM.&nbsp; apt-get lets automatically install software
+              from the repository.&nbsp; mount and umount let you access
+              the filesystem that is shared between your VM and your
+              local machine.</small></small></big></big></span><br>
+    <br>
+    <b><big>Suggestions if your VM is slow<br>
+        <br>
+      </big></b><big><small><small><big>If your VM is slow, one
+            suggestion is to write code on your native OS on your laptop
+            and then simply copy </big></small>it to your VM only to
+        compile, run, and test the code.</small>&nbsp; <small>You can
+        also interact with your VM through an ssh terminal session,
+        rather than through the VirtualBox GUI, which will be
+        faster.&nbsp; In other words, after you start your VM, just
+        minimize that window<big>, </big>open up an ssh session (via a
+        terminal window on Mac or through Putty on Windows) and ssh into
+        your VM to code.&nbsp; You should also be able to copy and paste
+        code through the ssh terminal. </small><br>
+    </big><b><big></big><br>
+      <br>
+    </b> <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <b><big><big><br>
+        </big></big></b>
+  </body>
+</html>

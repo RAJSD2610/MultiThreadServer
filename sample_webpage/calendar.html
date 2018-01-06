@@ -1,0 +1,533 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <link rel="shortcut icon" href="umass.jpg">
+    <meta content="text/html; charset=windows-1252"
+      http-equiv="Content-Type">
+    <title>System Software Design</title>
+    <meta content="David Irwin" name="author">
+    <meta content="Course Webpage" name="description">
+  </head>
+  <body link="#0000EE" alink="#EE0000" bgcolor="#FFFFFF" text="#000000"
+    vlink="#551A8B">
+    <table bgcolor="#ffffff" border="0" cellpadding="2" cellspacing="2"
+      width="100%">
+      <tbody>
+        <tr>
+          <td bgcolor="#ffffff" valign="top"><big><big><b>ECE 570/670 -
+                  (Advanced) System Software Design</b></big></big><big><big><b><br>
+                </b></big></big><big><big><b><a
+                    href="http://www.umass.edu"><font color="#990000"><small>University
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        of Massachusetts Amherst</small></font></a><br>
+                  <a href="http://engineering.umass.edu"><font
+                      color="#990000"><small>The College of Engineering</small></font>
+                  </a><br>
+                  <a href="http://www.ece.umass.edu"><font
+                      color="#990000"><small>Department of Electrical
+                        and Computer Engineering</small></font></a></b></big></big></td>
+          <td align="left" valign="top"><font color="#000000"><a
+                href="http://www.umass.edu"><img alt="UMass Amherst
+                  Logo" src="umass-logo.jpg" height="100" border="0"
+                  width="129"></a><br>
+            </font> </td>
+        </tr>
+      </tbody>
+    </table>
+    <br>
+    <big><big><b> </b></big></big>
+    <table height="33" align="center" bgcolor="#ffffff" border="2"
+      cellpadding="2" cellspacing="2" width="801">
+      <tbody>
+        <tr>
+          <td align="center" bgcolor="#ffffff" valign="top"><font
+              color="#000000"><a href="index.html"><b>Home</b></a><br>
+            </font> </td>
+          <td align="center" valign="top"><font color="#000000"><a
+                href="calendar.html"><b>Calendar</b></a></font> </td>
+          <td align="center" valign="top"><font color="#000000"><a
+                href="staff.html"><b>Staff</b></a></font> </td>
+          <td align="center" valign="top"><font color="#000000"><a
+                href="assignments.html"><b>Assignments</b></a></font></td>
+          <td align="center" valign="top"><font color="#000000"><a
+                href="projects.html"><b>Projects</b></a><a
+                href="file:///Users/irwin/Teaching/ece373/fall12/web/projects.html"><br>
+              </a></font> </td>
+          <td align="center" valign="top"><font color="#000000"><a
+                href="resources.html"><b>Resources</b></a></font></td>
+          <td align="center" valign="top"><font color="#000000"><a
+                href="http://smart.ecs.umass.edu/feedback/feedback.html"><b>Feedback</b></a></font></td>
+        </tr>
+      </tbody>
+    </table>
+    <big><big><b><br>
+          Calendar<br>
+        </b></big></big><big><big><small><small><br>
+            The table below lists the topics we will discuss in
+            class.&nbsp; Please note that links require a username and
+            password, which I will supply in class on the first
+            day.&nbsp; If you experience problems accessing any of the
+            assigned papers, please let your professor know as soon as
+            possible.<br>
+            <br>
+            Lecture slides will be posted after each class in PDF
+            format.&nbsp; <b>Note that all future dates are tentative
+              and subject to change!</b><br>
+            <br>
+          </small></small></big></big>
+    <table border="1" cellpadding="2" cellspacing="2" width="100%">
+      <tbody>
+        <tr>
+          <td align="center" valign="top"><b>Week<br>
+            </b></td>
+          <td align="center" valign="top"><b>Wednesday</b><br>
+          </td>
+          <td align="center" valign="top"><b>Friday</b><br>
+          </td>
+        </tr>
+        <tr align="center">
+          <td valign="top"><b><i>1<br>
+              </i></b></td>
+          <td valign="top"><b>1/25: </b>Course Overview [<a
+              href="lectures/lecture1.pdf">slides</a>]<br>
+          </td>
+          <td valign="top"><b>1/27:</b> Finish Overview and Processes [<a
+              href="lectures/lecture2.pdf">slides</a>] <br>
+            <font color="#000000"><a href="readings/hints.pdf">Hints for
+                Computer System Design</a><br>
+            </font> </td>
+        </tr>
+        <tr align="center">
+          <td valign="top"><i><b>2<br>
+              </b></i></td>
+          <td valign="top"><b>2/1</b>: Atomic Actions, Mutexes, and
+            Locks [<a href="lectures/lecture3.pdf">slides</a>] [<a
+              href="lectures/example.tar.gz">code example</a>]<br>
+            <meta charset="utf-8">
+            <font color="#000000"><a href="readings/events.pdf"
+                style="font-family: Times; font-size: medium;
+                font-style: normal; font-variant: normal; font-weight:
+                normal; letter-spacing: normal; line-height: normal;
+                orphans: auto; text-align: -webkit-center; text-indent:
+                0px; text-transform: none; white-space: normal; widows:
+                1; word-spacing: 0px; -webkit-text-stroke-width: 0px;
+                background-color: rgb(255, 255, 255);">Why Events Are A
+                Bad Idea (for high-concurrency servers)</a><br>
+            </font> </td>
+          <td valign="top"><b>2/3</b>: Monitors and CVs [<a
+              href="lectures/lecture4.pdf">slides</a>]<br>
+            <font color="#000000"><a href="readings/unix.pdf">The Unix
+                Time-Sharing System</a><br>
+              <b> </b><b>Assignment 0 out</b><br>
+            </font> </td>
+        </tr>
+        <tr align="center">
+          <td valign="top"><i><b>3<br>
+              </b></i></td>
+          <td valign="top"><b>2/8: </b>Producer/Consumer and R/W Locks
+            [<a href="lectures/lecture5.pdf">slides</a>]<br>
+          </td>
+          <td valign="top"><b>2/10</b>: Finish R/W Locks and Semaphores
+            [<a href="lectures/lecture6.pdf">slides</a>]<br>
+            <meta charset="utf-8">
+            <font color="#000000"><a href="readings/seda.pdf"
+                style="font-family: Times; font-size: medium;
+                font-style: normal; font-variant: normal; font-weight:
+                normal; letter-spacing: normal; line-height: normal;
+                orphans: auto; text-align: -webkit-center; text-indent:
+                0px; text-transform: none; white-space: normal; widows:
+                1; word-spacing: 0px; -webkit-text-stroke-width: 0px;
+                background-color: rgb(255, 255, 255);">Virtualization
+                Considered Harmful:<br>
+                OS Design Directions for Well-Conditioned Services</a><br>
+              <b>Assignment 0 due Tuesday 2/14 at 11:59pm</b>&nbsp; </font></td>
+        </tr>
+        <tr align="center">
+          <td valign="top"><i><b>4<br>
+              </b></i></td>
+          <td valign="top"><b>2/15</b>: Implementing Threads and Locks [<a
+              href="lectures/lecture7.pdf">slides</a>]<br>
+            <meta charset="utf-8">
+            <font color="#000000"><a href="readings/ImplementingCVs.pdf"
+                style="font-family: Times; font-size: medium;
+                font-style: normal; font-variant: normal; font-weight:
+                normal; letter-spacing: normal; line-height: normal;
+                orphans: auto; text-align: -webkit-center; text-indent:
+                0px; text-transform: none; white-space: normal; widows:
+                1; word-spacing: 0px; -webkit-text-stroke-width: 0px;
+                background-color: rgb(255, 255, 255);">Implementing
+                Condition Variables with Semaphores</a><br
+                style="font-family: Times; font-size: medium;
+                font-style: normal; font-variant: normal; font-weight:
+                normal; letter-spacing: normal; line-height: normal;
+                text-indent: 0px; text-transform: none; white-space:
+                normal; widows: 1; word-spacing: 0px; background-color:
+                rgb(255, 255, 255);">
+            </font> <font color="#000000"><a
+                href="readings/endtoend.pdf" style="font-family: Times;
+                font-size: medium; font-style: normal; font-variant:
+                normal; font-weight: normal; letter-spacing: normal;
+                line-height: normal; orphans: auto; text-align:
+                -webkit-center; text-indent: 0px; text-transform: none;
+                white-space: normal; widows: 1; word-spacing: 0px;
+                -webkit-text-stroke-width: 0px; background-color:
+                rgb(255, 255, 255);">End to End Arguments in Systems
+                Design</a><br>
+              <b>Assignment 1 out</b><br>
+            </font><br>
+          </td>
+          <td valign="top"><b>2/17</b>: Finish implementing locks [<a
+              href="lectures/lecture8.pdf">slides</a>]<br>
+            <meta charset="utf-8">
+            <font color="#000000"><a href="readings/exokernel.pdf"
+                style="font-family: Times; font-size: medium;
+                font-style: normal; font-variant: normal; font-weight:
+                normal; letter-spacing: normal; line-height: normal;
+                orphans: auto; text-align: -webkit-center; text-indent:
+                0px; text-transform: none; white-space: normal; widows:
+                1; word-spacing: 0px; -webkit-text-stroke-width: 0px;
+                background-color: rgb(255, 255, 255);">Exokernel: An
+                Operating System Architecture<span
+                  class="Apple-converted-space">&nbsp;</span><br>
+                for Application-Level Resource Management</a> <br>
+            </font>
+            <meta charset="utf-8">
+          </td>
+        </tr>
+        <tr align="center">
+          <td valign="top"><i><b>5<br>
+              </b></i></td>
+          <td valign="top"><b>2/22</b>: Deadlock and OS Structure [<a
+              href="lectures/lecture9.pdf">slides</a>]<br>
+            <br>
+          </td>
+          <td valign="top"><b>2/24</b>: CPU Scheduling and Threads [<a
+              href="lectures/lecture10.pdf">slides</a>]<br>
+            <meta charset="utf-8">
+            &nbsp; <font color="#000000"><a href="readings/eraser.pdf"
+                style="font-family: Times; font-size: medium;
+                font-style: normal; font-variant: normal; font-weight:
+                normal; letter-spacing: normal; line-height: normal;
+                orphans: auto; text-align: -webkit-center; text-indent:
+                0px; text-transform: none; white-space: normal; widows:
+                1; word-spacing: 0px; -webkit-text-stroke-width: 0px;
+                background-color: rgb(255, 255, 255);">Eraser: A Dynamic
+                Data Race Detector for Multithreaded Programs</a></font></td>
+        </tr>
+        <tr align="center">
+          <td valign="top"><i><b>6<br>
+              </b></i></td>
+          <td valign="top"><b>3/1</b>: Finish CPU Scheduling and Threads
+            [<a href="lectures/lecture11.pdf">slides</a>]<br>
+            <font color="#000000"><a href="readings/lottery.pdf"
+                style="font-family: Times; font-size: medium;
+                font-style: normal; font-variant: normal; font-weight:
+                normal; letter-spacing: normal; line-height: normal;
+                orphans: auto; text-align: -webkit-center; text-indent:
+                0px; text-transform: none; white-space: normal; widows:
+                1; word-spacing: 0px; -webkit-text-stroke-width: 0px;
+                background-color: rgb(255, 255, 255);">Lottery
+                Scheduling: Flexible Proportional-share Resource
+                Management</a></font> </td>
+          <td valign="top"><b>3/3</b>: Address Translation and Page
+            Replacement [<a href="lectures/lecture12.pdf">slides</a>]<br>
+            <b>670 Project Proposals due Monday 3/6 at 11:59pm</b><br>
+            <b><font color="#000000"><a href="readings/activations.pdf"
+                  style="font-family: Times; font-size: medium;
+                  font-style: normal; font-variant: normal; font-weight:
+                  normal; letter-spacing: normal; line-height: normal;
+                  orphans: auto; text-align: -webkit-center;
+                  text-indent: 0px; text-transform: none; white-space:
+                  normal; widows: 1; word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px; background-color:
+                  rgb(255, 255, 255);">Scheduler Activations: Effective
+                  Kernel Support for the<span
+                    class="Apple-converted-space">&nbsp;</span></a><br
+                  style="font-family: Times; font-size: medium;
+                  font-style: normal; font-variant: normal; font-weight:
+                  normal; letter-spacing: normal; line-height: normal;
+                  text-indent: 0px; text-transform: none; white-space:
+                  normal; widows: 1; word-spacing: 0px;
+                  background-color: rgb(255, 255, 255);">
+              </font> <font color="#000000"><a
+                  href="readings/activations.pdf" style="font-family:
+                  Times; font-size: medium; font-style: normal;
+                  font-variant: normal; font-weight: normal;
+                  letter-spacing: normal; line-height: normal; orphans:
+                  auto; text-align: -webkit-center; text-indent: 0px;
+                  text-transform: none; white-space: normal; widows: 1;
+                  word-spacing: 0px; -webkit-text-stroke-width: 0px;
+                  background-color: rgb(255, 255, 255);">User-Level
+                  Management of Parallelism</a></font> <br>
+              &nbsp;&nbsp; Assignment 1 (first part) due Sunday 3/5 at
+              11:59pm </b><br>
+          </td>
+        </tr>
+        <tr align="center">
+          <td valign="top"><i><b>7<br>
+              </b></i></td>
+          <td valign="top"><b>3/8: </b>Midterm Exam Review [<a
+              href="lectures/midterm.pdf">slides</a>]<br>
+            <a href="lectures/exam-review.pdf">Midterm Exam Study Guide<font
+                color="#000000"></font></a><font color="#000000"><a
+                style="font-family: Times; font-size: medium;
+                font-style: normal; font-variant: normal; font-weight:
+                normal; letter-spacing: normal; line-height: normal;
+                orphans: auto; text-align: -webkit-center; text-indent:
+                0px; text-transform: none; white-space: normal; widows:
+                1; word-spacing: 0px; -webkit-text-stroke-width: 0px;
+                background-color: rgb(255, 255, 255);"><span
+                  class="Apple-converted-space"></span></a></font><br>
+            <b>Midterm 7pm-9pm on Thursday, March 9th<br>
+              ELAB II 119<br>
+            </b> </td>
+          <td valign="top"><b>3/10</b>: Help session for Assignment 1<b>
+            </b></td>
+        </tr>
+        <tr align="center">
+          <td valign="top"><i><b>8<br>
+              </b></i></td>
+          <td valign="top"><b>3/15</b>:&nbsp; Spring Break </td>
+          <td valign="top"><b>3/17</b>: Spring Break<font
+              color="#000000"><a
+                href="http://smart.ecs.umass.edu/feedback/lab.mp4"
+                style="font-family: Times; font-size: medium;
+                font-style: normal; font-variant: normal; font-weight:
+                normal; letter-spacing: normal; line-height: normal;
+                orphans: auto; text-align: -webkit-center; text-indent:
+                0px; text-transform: none; white-space: normal; widows:
+                1; word-spacing: 0px; -webkit-text-stroke-width: 0px;
+                background-color: rgb(255, 255, 255);"></a></font></td>
+        </tr>
+        <tr align="center">
+          <td valign="top"><i><b>9<br>
+              </b></i></td>
+          <td valign="top"><b>3/22: </b>Address translation and paging
+            [<a href="lectures/lecture13.pdf">slides</a>]<br>
+          </td>
+          <td valign="top"><b>3/24</b>: No class! Work on your
+            assignment!<br>
+            Out-of-Class Kernel Lab assigned<br>
+            <font color="#999999"><a href="assignments/lab.txt"
+                style="font-family: Times; font-size: medium;
+                font-style: normal; font-variant: normal; font-weight:
+                normal; letter-spacing: normal; line-height: normal;
+                orphans: auto; text-align: -webkit-center; text-indent:
+                0px; text-transform: none; white-space: normal; widows:
+                1; word-spacing: 0px; -webkit-text-stroke-width: 0px;
+                background-color: rgb(255, 255, 255);">Lab Handout</a><br
+                style="font-family: Times; font-size: medium;
+                font-style: normal; font-variant: normal; font-weight:
+                normal; letter-spacing: normal; line-height: normal;
+                text-indent: 0px; text-transform: none; white-space:
+                normal; widows: 1; word-spacing: 0px; background-color:
+                rgb(255, 255, 255);">
+            </font> <font color="#999999"><a
+                href="http://smart.ecs.umass.edu/feedback/lab.ova"
+                style="font-family: Times; font-size: medium;
+                font-style: normal; font-variant: normal; font-weight:
+                normal; letter-spacing: normal; line-height: normal;
+                orphans: auto; text-align: -webkit-center; text-indent:
+                0px; text-transform: none; white-space: normal; widows:
+                1; word-spacing: 0px; -webkit-text-stroke-width: 0px;
+                background-color: rgb(255, 255, 255);">Lab VM</a><br
+                style="font-family: Times; font-size: medium;
+                font-style: normal; font-variant: normal; font-weight:
+                normal; letter-spacing: normal; line-height: normal;
+                text-indent: 0px; text-transform: none; white-space:
+                normal; widows: 1; word-spacing: 0px; background-color:
+                rgb(255, 255, 255);">
+            </font> <font color="#999999"><a
+                href="http://smart.ecs.umass.edu/feedback/lab.mp4"
+                style="font-family: Times; font-size: medium;
+                font-style: normal; font-variant: normal; font-weight:
+                normal; letter-spacing: normal; line-height: normal;
+                orphans: auto; text-align: -webkit-center; text-indent:
+                0px; text-transform: none; white-space: normal; widows:
+                1; word-spacing: 0px; -webkit-text-stroke-width: 0px;
+                background-color: rgb(255, 255, 255);">Lab video</a></font><b>
+            </b><br>
+            <b>Assignment 1 (second part) due on Tuesday 3/28 at 11:59pm</b>
+          </td>
+        </tr>
+        <tr align="center">
+          <td valign="top"><i><b>10<br>
+              </b></i></td>
+          <td valign="top"><b>3/29</b>:&nbsp; Address translation and
+            paging [<a href="lectures/lecture14.pdf">slides</a>]<br>
+            <b>Assignment 2 out</b><br>
+          </td>
+          <td valign="top"><b>3/31</b>: Go over Midterm and assignment [<a
+              href="lectures/lecture15.pdf">slides</a>]<br>
+            <br>
+            &nbsp; <font color="#000000"><br>
+            </font>
+            <meta charset="utf-8">
+          </td>
+        </tr>
+        <tr align="center">
+          <td valign="top"><i><b>11<br>
+              </b></i></td>
+          <td valign="top"><b>4/5</b>: Dual-mode operation and thrashing
+            [<a href="lectures/lecture16.pdf">slides</a>]<br>
+            <font color="#000000"><a href="readings/xen.pdf"
+                style="font-family: Times; font-size: medium;
+                font-style: normal; font-variant: normal; font-weight:
+                normal; letter-spacing: normal; line-height: normal;
+                orphans: auto; text-align: -webkit-center; text-indent:
+                0px; text-transform: none; white-space: normal; widows:
+                1; word-spacing: 0px; -webkit-text-stroke-width: 0px;
+                background-color: rgb(255, 255, 255);">Xen and the Art
+                of Virtualization</a></font> <font color="#000000"> </font>
+          </td>
+          <td valign="top"><b>4/7</b>:&nbsp; Virtual machines [<a
+              href="lectures/lecture17.pdf">slides</a>]<br>
+            <font color="#000000"><a href="readings/live.pdf">Live
+                Migration of Virtual Machines</a></font>
+            <meta charset="utf-8">
+            <meta charset="utf-8">
+          </td>
+        </tr>
+        <tr align="center">
+          <td valign="top"><i><b>12<br>
+              </b></i></td>
+          <td valign="top"><b>4/12</b>: Continue virtual machines [<a
+              href="lectures/lecture18.pdf">slides</a>]<br>
+            <font color="#000000"><a href="readings/vmware.pdf"
+                style="font-family: Times; font-size: medium;
+                font-style: normal; font-variant: normal; font-weight:
+                normal; letter-spacing: normal; line-height: normal;
+                orphans: auto; text-align: -webkit-center; text-indent:
+                0px; text-transform: none; white-space: normal; widows:
+                1; word-spacing: 0px; -webkit-text-stroke-width: 0px;
+                background-color: rgb(255, 255, 255);">Memory Resource
+                Management in VMware ESX Server</a></font> <font
+              color="#000000"> </font><br>
+            <br>
+          </td>
+          <td valign="top"><b>4/14</b>: Finish virtual machines [<a
+              href="lectures/lecture19.pdf">slides</a>]<br>
+            <font color="#000000"><a href="readings/remus.pdf">Remus:
+                High Availability via Asynchronous Virtual Machine
+                Replication</a></font><br>
+            <b>Assignment 2 due 4/17</b><br>
+          </td>
+        </tr>
+        <tr align="center">
+          <td valign="top"><i><b>13<br>
+              </b></i></td>
+          <td valign="top"><b>4/19</b>: Stack Smashing/GDB tutorial [<a
+              href="lectures/lecture20.pdf">slides</a>]<br>
+            <meta charset="utf-8">
+            <b>Assignment 3 out</b> </td>
+          <td valign="top"><b>4/21</b>: Security [<a
+              href="lectures/lecture21.pdf">slides</a>]<br>
+            <font color="#000000"><a href="readings/oblivious.pdf"
+                style="font-family: Times; font-size: medium;
+                font-style: normal; font-variant: normal; font-weight:
+                normal; letter-spacing: normal; line-height: normal;
+                orphans: auto; text-align: -webkit-center; text-indent:
+                0px; text-transform: none; white-space: normal; widows:
+                1; word-spacing: 0px; -webkit-text-stroke-width: 0px;
+                background-color: rgb(255, 255, 255);">Enhancing Server
+                Availability and Security Through Failure-Oblivious
+                Computing</a></font> </td>
+        </tr>
+        <tr align="center">
+          <td valign="top"><i><b>14<br>
+              </b></i></td>
+          <td valign="top"><b>4/26</b><b>:</b> Devices/Networking </td>
+          <td valign="top"><b>4/28</b><b>: </b>Files and File System <br>
+            <b>Assignment 3 due 5/2 at 11:59pm<br>
+              670 Final Projects due at Exit Interview<br>
+            </b></td>
+        </tr>
+        <tr>
+          <td align="center" valign="top"><i><b>15</b></i><br>
+          </td>
+          <td align="center" valign="top"><b>5/9</b><b>: Final Exam<br>
+            </b></td>
+          <td align="center" valign="top">No Class<br>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <big><big><small><small><br>
+          </small></small></big></big><br>
+    <br>
+    <b><big><big><br>
+        </big></big></b>
+  </body>
+</html>

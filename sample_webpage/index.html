@@ -1,0 +1,277 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <link rel="shortcut icon" href="umass.jpg">
+    <meta content="text/html; charset=windows-1252"
+      http-equiv="Content-Type">
+    <title>System Software Design</title>
+    <meta content="David Irwin" name="author">
+    <meta content="Course Webpage" name="description">
+  </head>
+  <body link="#0000EE" alink="#EE0000" bgcolor="#FFFFFF" text="#000000"
+    vlink="#551A8B">
+    <table bgcolor="#ffffff" border="0" cellpadding="2" cellspacing="2"
+      width="100%">
+      <tbody>
+        <tr>
+          <td bgcolor="#ffffff" valign="top"><big><big><b>ECE 570/670 -
+                  (Advanced) System Software Design<br>
+                  <a href="http://www.umass.edu"><font color="#990000"><small>University
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        of Massachusetts Amherst</small></font></a><br>
+                  <a href="http://engineering.umass.edu"><font
+                      color="#990000"><small>The College of Engineering</small></font>
+                  </a><br>
+                  <a href="http://www.ece.umass.edu"><font
+                      color="#990000"><small>Department of Electrical
+                        and Computer Engineering</small></font></a></b></big></big></td>
+          <td align="left" valign="top"><a href="http://www.umass.edu"><img
+                alt="UMass Amherst Logo" src="umass-logo.jpg"
+                height="100" border="0" width="129"></a><br>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <br>
+    <table height="33" align="center" bgcolor="#ffffff" border="2"
+      cellpadding="2" cellspacing="2" width="801">
+      <tbody>
+        <tr>
+          <td align="center" bgcolor="#ffffff" valign="top"><a
+              href="index.html"><b>Home</b></a><br>
+          </td>
+          <td align="center" valign="top"><a href="calendar.html"><b>Calendar</b></a>
+          </td>
+          <td align="center" valign="top"><a href="staff.html"><b>Staff</b></a>
+          </td>
+          <td align="center" valign="top"><a href="assignments.html"><b>Assignments</b></a></td>
+          <td align="center" valign="top"><a href="projects.html"><b>Projects</b></a><a
+href="file:///Users/irwin/Teaching/ece373/fall12/web/projects.html"><br>
+            </a> </td>
+          <td align="center" valign="top"><a href="resources.html"><b>Resources</b></a></td>
+          <td align="center" valign="top"><a
+              href="http://smart.ecs.umass.edu/feedback/feedback.html"><b>Feedback</b></a></td>
+        </tr>
+      </tbody>
+    </table>
+    <big><big><b><br>
+        </b><b>News</b></big></big><br>
+    <br>
+    01/25/2017 &nbsp;&nbsp; First lecture 2:30pm-3:45pm<br>
+    <br>
+    <b><big><big>Overview<small><small><small><br>
+              </small></small></small></big></big></b><br>
+    <span style="color: rgb(0, 0, 0); font-family: 'Liberation Serif',
+      'Times New Roman', serif; font-size: 16px; font-style: normal;
+      font-variant: normal; font-weight: normal; letter-spacing: normal;
+      line-height: normal; orphans: 0; text-align: left; text-indent:
+      0px; text-transform: none; white-space: normal; widows: 0;
+      word-spacing: 0px; -webkit-text-size-adjust: auto;
+      -webkit-text-stroke-width: 0px; display: inline !important; float:
+      none; ">This course provides an introduction to software systems
+      with an emphasis on operating system design and
+      implementation.&nbsp; A key aspect is computer architecture and
+      system software interaction.&nbsp; Topics include: process
+      management, threading, synchronization, deadlock, scheduling,
+      security, I/O systems, and distributed systems.&nbsp; </span><br>
+    <p><b><big><big>Organization<br>
+            <small><small><small> </small></small></small></big></big></b></p>
+    <p>This webpage is the primary source for up-to-date information
+      about the course. <b>Check it often! </b>The course also has a <a
+        href="http://moodle.umass.edu">Moodle page</a>, which will be
+      used primarily for posting grades throughout the course.<span
+        style="color: rgb(0, 0, 0); font-family: 'Liberation Serif',
+        'Times New Roman', serif; font-size: 16px; font-style: normal;
+        font-variant: normal; font-weight: normal; letter-spacing:
+        normal; line-height: normal; orphans: 0; text-align: left;
+        text-indent: 0px; text-transform: none; white-space: normal;
+        widows: 0; word-spacing: 0px; -webkit-text-size-adjust: auto;
+        -webkit-text-stroke-width: 0px; display: inline !important;
+        float: none; "> A pdf version of the syllabus for both ECE570
+        and ECE670 can be found <a href="syllabus.pdf">here</a>. The
+        prerequisites for 570 are ECE 232 (Hardware Organization and
+        Design) and <a href="http://www.ecs.umass.edu/ece242/">ECE 242</a>
+        (Data Structures and Algorithms). <a
+          href="http://people.cs.umass.edu/%7Ebarring/cs187/">CMPSCI 187</a>
+        (Programming with Data Structures) can also be taken in lieu of
+        ECE 242.&nbsp; <br>
+      </span></p>
+    <p><span style="color: rgb(0, 0, 0); font-family: 'Liberation
+        Serif', 'Times New Roman', serif; font-size: 16px; font-style:
+        normal; font-variant: normal; font-weight: normal;
+        letter-spacing: normal; line-height: normal; orphans: 0;
+        text-align: left; text-indent: 0px; text-transform: none;
+        white-space: normal; widows: 0; word-spacing: 0px;
+        -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px;
+        display: inline !important; float: none; ">The suggested
+        (although not required) course textbook is Operating Systems:
+        Three Easy Pieces, linked <a
+          href="http://pages.cs.wisc.edu/%7Eremzi/OSTEP/">here</a>.&nbsp;</span><span
+        style="color: rgb(0, 0, 0); font-family: 'Liberation Serif',
+        'Times New Roman', serif; font-size: 16px; font-style: normal;
+        font-variant: normal; font-weight: normal; letter-spacing:
+        normal; line-height: normal; orphans: 0; text-align: left;
+        text-indent: 0px; text-transform: none; white-space: normal;
+        widows: 0; word-spacing: 0px; -webkit-text-size-adjust: auto;
+        -webkit-text-stroke-width: 0px; display: inline !important;
+        float: none; "> The class will consist of two lectures on
+        Wednesday and Friday from 2:30pm-3:45pm.</span><br>
+    </p>
+    <p><span style="color: rgb(0, 0, 0); font-family: 'Liberation
+        Serif', 'Times New Roman', serif; font-size: 16px; font-style:
+        normal; font-variant: normal; font-weight: normal;
+        letter-spacing: normal; line-height: normal; orphans: 0;
+        text-align: left; text-indent: 0px; text-transform: none;
+        white-space: normal; widows: 0; word-spacing: 0px;
+        -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px;
+        display: inline !important; float: none; ">Course grades for 570
+        will be determined based on the following breakdown:<br>
+      </span></p>
+    <ul>
+      <li><span style="color: rgb(0, 0, 0); font-family: 'Liberation
+          Serif', 'Times New Roman', serif; font-size: 16px; font-style:
+          normal; font-variant: normal; font-weight: normal;
+          letter-spacing: normal; line-height: normal; orphans: 0;
+          text-align: left; text-indent: 0px; text-transform: none;
+          white-space: normal; widows: 0; word-spacing: 0px;
+          -webkit-text-size-adjust: auto; -webkit-text-stroke-width:
+          0px; display: inline !important; float: none; ">Assignments:
+          50%</span></li>
+      <li><span style="color: rgb(0, 0, 0); font-family: 'Liberation
+          Serif', 'Times New Roman', serif; font-size: 16px; font-style:
+          normal; font-variant: normal; font-weight: normal;
+          letter-spacing: normal; line-height: normal; orphans: 0;
+          text-align: left; text-indent: 0px; text-transform: none;
+          white-space: normal; widows: 0; word-spacing: 0px;
+          -webkit-text-size-adjust: auto; -webkit-text-stroke-width:
+          0px; display: inline !important; float: none; ">Exam(s): 50% <br>
+        </span></li>
+    </ul>
+    <p><span style="color: rgb(0, 0, 0); font-family: 'Liberation
+        Serif', 'Times New Roman', serif; font-size: 16px; font-style:
+        normal; font-variant: normal; font-weight: normal;
+        letter-spacing: normal; line-height: normal; orphans: 0;
+        text-align: left; text-indent: 0px; text-transform: none;
+        white-space: normal; widows: 0; word-spacing: 0px;
+        -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px;
+        display: inline !important; float: none; ">Course grades for 670
+        will be determined based on the following breakdown:<br>
+      </span></p>
+    <ul>
+      <li><span style="color: rgb(0, 0, 0); font-family: 'Liberation
+          Serif', 'Times New Roman', serif; font-size: 16px; font-style:
+          normal; font-variant: normal; font-weight: normal;
+          letter-spacing: normal; line-height: normal; orphans: 0;
+          text-align: left; text-indent: 0px; text-transform: none;
+          white-space: normal; widows: 0; word-spacing: 0px;
+          -webkit-text-size-adjust: auto; -webkit-text-stroke-width:
+          0px; display: inline !important; float: none; ">Assignments:
+          45%</span></li>
+      <li><span style="color: rgb(0, 0, 0); font-family: 'Liberation
+          Serif', 'Times New Roman', serif; font-size: 16px; font-style:
+          normal; font-variant: normal; font-weight: normal;
+          letter-spacing: normal; line-height: normal; orphans: 0;
+          text-align: left; text-indent: 0px; text-transform: none;
+          white-space: normal; widows: 0; word-spacing: 0px;
+          -webkit-text-size-adjust: auto; -webkit-text-stroke-width:
+          0px; display: inline !important; float: none; ">Independent
+          Project: 20%</span></li>
+      <li><span style="color: rgb(0, 0, 0); font-family: 'Liberation
+          Serif', 'Times New Roman', serif; font-size: 16px; font-style:
+          normal; font-variant: normal; font-weight: normal;
+          letter-spacing: normal; line-height: normal; orphans: 0;
+          text-align: left; text-indent: 0px; text-transform: none;
+          white-space: normal; widows: 0; word-spacing: 0px;
+          -webkit-text-size-adjust: auto; -webkit-text-stroke-width:
+          0px; display: inline !important; float: none; ">Exam(s): 35% </span></li>
+    </ul>
+    <p>Please note that all projects and assignments are due by the
+      specified time in the calendar. <br>
+    </p>
+    <p><b><big><big>Academic Honesty Policy</big></big><br>
+      </b></p>
+    <p>
+      <meta charset="utf-8">
+    </p>
+    <meta http-equiv="Content-Type" content="text/html;
+      charset=windows-1252">
+    It is expected that all students will abide by the <a
+      href="http://www.umass.edu/dean_students/academic_policy">Academic
+      Honesty Policy</a>.&nbsp; The full policy is available <a
+href="http://www.umass.edu/honesty/sites/default/files/pdf/academic_honesty_policy.pdf">here</a>.<br>
+    <p> <span style="color: rgb(0, 0, 0); font-family: 'Liberation
+        Serif', 'Times New Roman', serif; font-size: 16px; font-style:
+        normal; font-variant: normal; font-weight: normal;
+        letter-spacing: normal; line-height: normal; orphans: 0;
+        text-align: left; text-indent: 0px; text-transform: none;
+        white-space: normal; widows: 0; word-spacing: 0px;
+        -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px;
+        display: inline !important; float: none; "> </span><b><big><big><br>
+          </big></big></b></p>
+    <br>
+    <b><big><big><br>
+          <br>
+        </big></big></b>
+  </body>
+</html>
