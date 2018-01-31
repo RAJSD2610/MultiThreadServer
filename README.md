@@ -1,3 +1,4 @@
+# [Report](../master/FinalReport.pdf)
 # Compiling the code
 ``` make ```
 
