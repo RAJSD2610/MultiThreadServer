@@ -10,4 +10,4 @@ Open any browser and enter the path name of the file taking the above <directory
 ``` <path>:<port> ```
 
 # Sample files
-For example use the ``` sample_webpage ```
+For example use the [sample_webpage](../master/sample_webpage)
